@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <h2>JavaScript<h2>
+    <h2>Enter your First and Last Name:</h2>
+
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" placeholder="First Name">
+    <br><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" placeholder="Last Name">
+    <br><br>
+
+    <button onclick="displayFullName()">Submit</button>
+
+    <p id="fullNameDisplay"></p>
+
+    <script>
+        function displayFullName() {
+            // Get the input values
+            let firstName = document.getElementById("firstName").value;
+            let lastName = document.getElementById("lastName").value;
+
+            // Combine first and last names
+            let fullName = firstName + " " + lastName;
+
+            // Display the full name
+            document.getElementById("fullNameDisplay").textContent = "Hello, " + fullName + "!";
+        }
+    </script>
+</body>
+</html>
